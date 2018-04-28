@@ -115,6 +115,7 @@ Training on any level and then testing on another one is also rather difficult, 
 * Make sure that you have lua 5.1 installed. I had problems with 5.2 in torch.
 * Make sure that you have gcc 4.9 or higher installed. The emulator will compile happily with gcc <4.9, but then sometimes throw errors when you actually use it.
 * Install torch.
+  * export TORCH_NVCC_FLAGS="-D__CUDA_NO_HALF_OPERATORS__"
   * Follow the steps from [torch.ch](http://torch.ch/docs/getting-started.html#_)
   * Make sure that the following packages are installed (`luarocks install packageName`): `nn`, `cudnn`, `paths`, `image`, `display`. display is usually not part of torch.
 * Install the spatial transformer module for torch:
